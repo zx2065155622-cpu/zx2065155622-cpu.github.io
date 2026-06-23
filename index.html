@@ -1,191 +1,311 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AI工具导航站</title>
+<title>Best AI Tools 2026 | Smart AI Tool Finder</title>
 
-<meta name="description" content="收录真实可用的AI工具导航，不夸大、不造假，只推荐真实工具官网。">
+<meta name="description" content="Find and compare the best AI tools for writing, design, coding, and video. Smart AI tool directory with search and categories.">
 
 <style>
+
+/* 🌌 BACKGROUND ANIMATION */
 body{
 margin:0;
-font-family:Arial;
-background:#0f172a;
+font-family:Arial, sans-serif;
 color:#fff;
+background: radial-gradient(circle at top, #111827, #05070f);
+overflow-x:hidden;
 }
 
-header{
-padding:30px 15px;
+/* floating glow */
+.bg-glow{
+position:fixed;
+width:600px;
+height:600px;
+background:rgba(122,162,255,0.15);
+filter:blur(120px);
+border-radius:50%;
+top:-200px;
+left:-200px;
+animation:move 10s infinite alternate;
+z-index:-1;
+}
+
+@keyframes move{
+from{transform:translate(0,0);}
+to{transform:translate(300px,200px);}
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+background:rgba(17,24,39,0.7);
+backdrop-filter: blur(12px);
+position:sticky;
+top:0;
+z-index:10;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+color:#7aa2ff;
+font-weight:bold;
+}
+
+nav a{
+color:#aaa;
+margin-left:14px;
+text-decoration:none;
+font-size:13px;
+}
+
+nav a:hover{color:#fff;}
+
+/* HERO */
+.hero{
 text-align:center;
-background:#111c33;
+padding:60px 20px 20px;
 }
 
-h1{
+.hero h1{
+font-size:40px;
 margin:0;
-font-size:28px;
 }
 
-p{
-color:#94a3b8;
+.hero p{
+color:#aaa;
+max-width:650px;
+margin:10px auto;
 }
 
-.search{
-margin-top:15px;
+/* SEARCH */
+.search-box{
+text-align:center;
+margin:20px auto;
 }
 
 input{
-width:90%;
-max-width:600px;
+width:80%;
+max-width:500px;
 padding:12px;
 border-radius:10px;
 border:none;
 outline:none;
-font-size:15px;
+background:#111827;
+color:#fff;
+border:1px solid #2a3550;
 }
 
-.container{
+/* SECTION */
+.section{
 max-width:1100px;
 margin:auto;
 padding:20px;
 }
 
-.section{
+h2{
+color:#7aa2ff;
 margin-top:30px;
 }
 
-h2{
-font-size:20px;
-border-left:4px solid #3b82f6;
-padding-left:10px;
-}
-
+/* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-margin-top:15px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:14px;
 }
 
+/* CARD */
 .card{
-background:#111c33;
-padding:15px;
-border-radius:12px;
-border:1px solid #1f2a44;
-transition:0.2s;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+padding:16px;
+border-radius:14px;
+transition:0.25s;
+backdrop-filter: blur(10px);
+cursor:pointer;
 }
 
 .card:hover{
-transform:translateY(-3px);
-border-color:#3b82f6;
+transform:translateY(-6px);
+border-color:#7aa2ff;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 .card a{
-color:#60a5fa;
+color:#7aa2ff;
 text-decoration:none;
 font-weight:bold;
+font-size:16px;
 }
 
-.desc{
+.card p{
+color:#aaa;
 font-size:13px;
-color:#94a3b8;
-margin-top:8px;
-line-height:1.4;
+margin-top:6px;
 }
 
+/* TAG */
 .tag{
 display:inline-block;
-margin-top:8px;
 font-size:11px;
-padding:3px 8px;
-background:#1e293b;
+padding:4px 8px;
 border-radius:6px;
-color:#cbd5e1;
+background:rgba(122,162,255,0.15);
+color:#7aa2ff;
+margin-bottom:8px;
 }
 
+/* FOOTER */
 footer{
 text-align:center;
-padding:30px;
-color:#64748b;
-font-size:13px;
+padding:40px;
+color:#666;
+font-size:12px;
+border-top:1px solid rgba(255,255,255,0.08);
 margin-top:40px;
-border-top:1px solid #1e293b;
 }
+
+/* MOBILE */
+@media(max-width:600px){
+.hero h1{font-size:28px;}
+input{width:90%;}
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>AI工具导航站</h1>
-<p>只收录真实可用的AI工具官网</p>
+<!-- background effect -->
+<div class="bg-glow"></div>
 
-<div class="search">
-<input type="text" id="search" placeholder="搜索AI工具...">
+<!-- NAV -->
+<nav>
+<div class="logo">AI Tools</div>
+<div>
+<a href="#writing">Writing</a>
+<a href="#image">Image</a>
+<a href="#coding">Coding</a>
+<a href="#video">Video</a>
 </div>
-</header>
+</nav>
 
-<div class="container">
-
-<div class="section">
-
-<h2>🔥 已收录工具（真实官网）</h2>
-
-<div class="grid" id="list">
-
-<div class="card">
-<a href="https://chat.openai.com" target="_blank">ChatGPT</a>
-<div class="desc">OpenAI推出的AI聊天与写作工具</div>
-<div class="tag">AI写作</div>
+<!-- HERO -->
+<div class="hero">
+<h1>Find the Best AI Tools</h1>
+<p>Search, compare and choose AI tools instantly. Clean, fast and modern AI directory.</p>
 </div>
 
-<div class="card">
-<a href="https://claude.ai" target="_blank">Claude</a>
-<div class="desc">Anthropic开发的AI助手</div>
-<div class="tag">AI写作</div>
+<!-- SEARCH -->
+<div class="search-box">
+<input type="text" id="search" onkeyup="filterTools()" placeholder="Search AI tools...">
 </div>
 
-<div class="card">
-<a href="https://gemini.google.com" target="_blank">Gemini</a>
-<div class="desc">Google推出的AI模型</div>
-<div class="tag">AI搜索</div>
-</div>
+<!-- WRITING -->
+<div class="section" id="writing">
+<h2>✍️ Writing Tools</h2>
+
+<div class="grid tools">
 
 <div class="card">
-<a href="https://www.midjourney.com" target="_blank">Midjourney</a>
-<div class="desc">AI图像生成工具</div>
-<div class="tag">AI绘画</div>
+<div class="tag">Best</div>
+<a>ChatGPT</a>
+<p>Best AI writing assistant for all users.</p>
 </div>
 
 <div class="card">
-<a href="https://www.perplexity.ai" target="_blank">Perplexity</a>
-<div class="desc">AI搜索引擎</div>
-<div class="tag">AI搜索</div>
+<div class="tag">Deep</div>
+<a>Claude AI</a>
+<p>Best for long writing and reasoning.</p>
+</div>
+
+<div class="card">
+<div class="tag">Marketing</div>
+<a>Jasper AI</a>
+<p>AI tool for ads and marketing content.</p>
 </div>
 
 </div>
+</div>
 
+<!-- IMAGE -->
+<div class="section" id="image">
+<h2>🎨 Image Tools</h2>
+
+<div class="grid tools">
+
+<div class="card">
+<div class="tag">Top</div>
+<a>Midjourney</a>
+<p>Best AI image generation tool.</p>
+</div>
+
+<div class="card">
+<div class="tag">Easy</div>
+<a>DALL·E</a>
+<p>Create images from text prompts.</p>
+</div>
+
+</div>
+</div>
+
+<!-- CODING -->
+<div class="section" id="coding">
+<h2>💻 Coding Tools</h2>
+
+<div class="grid tools">
+
+<div class="card">
+<div class="tag">Pro</div>
+<a>GitHub Copilot</a>
+<p>AI coding assistant for developers.</p>
+</div>
+
+<div class="card">
+<div class="tag">Free</div>
+<a>Codeium</a>
+<p>Free AI coding helper.</p>
+</div>
+
+</div>
+</div>
+
+<!-- VIDEO -->
+<div class="section" id="video">
+<h2>🎬 Video Tools</h2>
+
+<div class="grid tools">
+
+<div class="card">
+<div class="tag">AI Video</div>
+<a>Runway</a>
+<p>Best AI video generator.</p>
+</div>
+
+</div>
 </div>
 
 <footer>
-© 2025 AI工具导航站｜只收录真实工具，不做夸大内容
+© 2026 AI Tools Directory
 </footer>
 
-</div>
-
+<!-- SEARCH SCRIPT -->
 <script>
-const input = document.getElementById("search");
-const cards = document.querySelectorAll(".card");
+function filterTools(){
+let input = document.getElementById("search").value.toLowerCase();
+let cards = document.querySelectorAll(".card");
 
-input.addEventListener("input", function(){
-const val = this.value.toLowerCase();
-
-cards.forEach(c=>{
-const text = c.innerText.toLowerCase();
-c.style.display = text.includes(val) ? "block" : "none";
+cards.forEach(card=>{
+let text = card.innerText.toLowerCase();
+card.style.display = text.includes(input) ? "block" : "none";
 });
-});
+}
 </script>
 
 </body>
