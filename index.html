@@ -1,131 +1,116 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AI工具导航 - 全球热门AI工具推荐</title>
+<title>AI工具导航站</title>
 
-<meta name="description" content="收录全球热门AI工具，包括ChatGPT、Claude、Gemini、Midjourney、Runway等。">
+<meta name="description" content="收录真实可用的AI工具导航，不夸大、不造假，只推荐真实工具官网。">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
-background:#0f1115;
+margin:0;
+font-family:Arial;
+background:#0f172a;
 color:#fff;
 }
 
 header{
-padding:50px 20px;
+padding:30px 15px;
 text-align:center;
-background:#151925;
+background:#111c33;
 }
 
-header h1{
-font-size:38px;
-margin-bottom:10px;
+h1{
+margin:0;
+font-size:28px;
 }
 
-header p{
-color:#aaa;
+p{
+color:#94a3b8;
 }
 
 .search{
-max-width:700px;
-margin:25px auto;
+margin-top:15px;
 }
 
-.search input{
-width:100%;
-padding:16px;
+input{
+width:90%;
+max-width:600px;
+padding:12px;
+border-radius:10px;
 border:none;
-border-radius:12px;
-font-size:16px;
+outline:none;
+font-size:15px;
 }
 
 .container{
-max-width:1200px;
+max-width:1100px;
 margin:auto;
 padding:20px;
 }
 
-.section-title{
-font-size:24px;
-margin:25px 0;
+.section{
+margin-top:30px;
+}
+
+h2{
+font-size:20px;
+border-left:4px solid #3b82f6;
+padding-left:10px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:15px;
+margin-top:15px;
 }
 
 .card{
-background:#171b29;
-padding:20px;
-border-radius:14px;
-transition:0.3s;
-cursor:pointer;
+background:#111c33;
+padding:15px;
+border-radius:12px;
+border:1px solid #1f2a44;
+transition:0.2s;
 }
 
 .card:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,.4);
+transform:translateY(-3px);
+border-color:#3b82f6;
 }
 
 .card a{
-color:#7aa2ff;
-font-size:20px;
-font-weight:bold;
+color:#60a5fa;
 text-decoration:none;
+font-weight:bold;
 }
 
-.card p{
-margin-top:10px;
-color:#bbb;
+.desc{
+font-size:13px;
+color:#94a3b8;
+margin-top:8px;
+line-height:1.4;
 }
 
 .tag{
-margin-top:10px;
-font-size:12px;
-color:#999;
-}
-
-.ad{
-background:#1b2233;
-border:1px dashed #555;
-padding:20px;
-text-align:center;
-margin:25px 0;
-border-radius:12px;
-}
-
-.categories{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
-gap:12px;
-}
-
-.cat{
-background:#171b29;
-padding:18px;
-border-radius:12px;
-text-align:center;
-font-weight:bold;
+display:inline-block;
+margin-top:8px;
+font-size:11px;
+padding:3px 8px;
+background:#1e293b;
+border-radius:6px;
+color:#cbd5e1;
 }
 
 footer{
-margin-top:50px;
-padding:30px;
 text-align:center;
-color:#888;
-border-top:1px solid #222;
+padding:30px;
+color:#64748b;
+font-size:13px;
+margin-top:40px;
+border-top:1px solid #1e293b;
 }
 </style>
 </head>
@@ -133,98 +118,75 @@ border-top:1px solid #222;
 <body>
 
 <header>
-<h1>⚡ AI工具导航</h1>
-<p>发现全球最热门的AI工具</p>
+<h1>AI工具导航站</h1>
+<p>只收录真实可用的AI工具官网</p>
 
 <div class="search">
-<input type="text" placeholder="🔍 搜索AI工具...">
+<input type="text" id="search" placeholder="搜索AI工具...">
 </div>
 </header>
 
 <div class="container">
 
-<div class="ad">
-🔥 广告位（Google AdSense / 联盟推广）
-</div>
+<div class="section">
 
-<h2 class="section-title">🔥 热门AI工具</h2>
+<h2>🔥 已收录工具（真实官网）</h2>
 
-<div class="grid">
+<div class="grid" id="list">
 
 <div class="card">
-<a href="https://chatgpt.com">ChatGPT</a>
-<p>AI聊天与写作助手</p>
+<a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+<div class="desc">OpenAI推出的AI聊天与写作工具</div>
 <div class="tag">AI写作</div>
 </div>
 
 <div class="card">
-<a href="https://claude.ai">Claude</a>
-<p>AI写作与编程助手</p>
+<a href="https://claude.ai" target="_blank">Claude</a>
+<div class="desc">Anthropic开发的AI助手</div>
 <div class="tag">AI写作</div>
 </div>
 
 <div class="card">
-<a href="https://gemini.google.com">Gemini</a>
-<p>Google AI助手</p>
+<a href="https://gemini.google.com" target="_blank">Gemini</a>
+<div class="desc">Google推出的AI模型</div>
 <div class="tag">AI搜索</div>
 </div>
 
 <div class="card">
-<a href="https://www.midjourney.com">Midjourney</a>
-<p>AI绘画生成平台</p>
+<a href="https://www.midjourney.com" target="_blank">Midjourney</a>
+<div class="desc">AI图像生成工具</div>
 <div class="tag">AI绘画</div>
 </div>
 
 <div class="card">
-<a href="https://www.perplexity.ai">Perplexity</a>
-<p>AI搜索引擎</p>
+<a href="https://www.perplexity.ai" target="_blank">Perplexity</a>
+<div class="desc">AI搜索引擎</div>
 <div class="tag">AI搜索</div>
 </div>
 
-<div class="card">
-<a href="https://runwayml.com">Runway</a>
-<p>AI视频生成工具</p>
-<div class="tag">AI视频</div>
 </div>
-
-<div class="card">
-<a href="https://cursor.com">Cursor</a>
-<p>AI编程神器</p>
-<div class="tag">AI编程</div>
-</div>
-
-<div class="card">
-<a href="https://notion.so">Notion AI</a>
-<p>AI办公助手</p>
-<div class="tag">AI办公</div>
-</div>
-
-</div>
-
-<div class="ad">
-📢 赞助推荐位
-</div>
-
-<h2 class="section-title">📂 AI工具分类</h2>
-
-<div class="categories">
-
-<div class="cat">✍ AI写作</div>
-<div class="cat">🎨 AI绘画</div>
-<div class="cat">🎬 AI视频</div>
-<div class="cat">💻 AI编程</div>
-<div class="cat">📊 AI办公</div>
-<div class="cat">🔍 AI搜索</div>
-<div class="cat">🎵 AI音乐</div>
-<div class="cat">🗣 AI语音</div>
 
 </div>
 
 <footer>
-© 2025 AI工具导航
+© 2025 AI工具导航站｜只收录真实工具，不做夸大内容
 </footer>
 
 </div>
+
+<script>
+const input = document.getElementById("search");
+const cards = document.querySelectorAll(".card");
+
+input.addEventListener("input", function(){
+const val = this.value.toLowerCase();
+
+cards.forEach(c=>{
+const text = c.innerText.toLowerCase();
+c.style.display = text.includes(val) ? "block" : "none";
+});
+});
+</script>
 
 </body>
 </html>
