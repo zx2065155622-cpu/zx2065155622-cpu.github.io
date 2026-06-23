@@ -1,63 +1,228 @@
-﻿<!-- A版赚钱导航首页 -->
-<!DOCTYPE html>
-<html lang="zh">
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>AI工具导航 - 最全AI工具推荐</title>
-<meta name="description" content="收录全球AI工具，包括AI写作、AI绘画、AI视频、AI编程工具推荐">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI工具导航 - 全球热门AI工具推荐</title>
+
+<meta name="description" content="收录全球热门AI工具，包括ChatGPT、Claude、Gemini、Midjourney、Runway等。">
+
 <style>
-body{background:#0f1115;color:#fff;font-family:Arial;margin:0}
-header{padding:20px;background:#151925}
-.logo{color:#7aa2ff;font-size:22px;font-weight:bold}
-.container{padding:20px}
-.ad{background:#1b2233;border:1px dashed #444;padding:15px;margin:15px 0;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-.card{background:#171b29;padding:15px;border-radius:10px}
-.card a{color:#7aa2ff;text-decoration:none}
-.tag{font-size:12px;color:#aaa}
-.badge{background:#ffb020;color:#000;padding:3px 6px;font-size:12px;border-radius:4px}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0f1115;
+color:#fff;
+}
+
+header{
+padding:50px 20px;
+text-align:center;
+background:#151925;
+}
+
+header h1{
+font-size:38px;
+margin-bottom:10px;
+}
+
+header p{
+color:#aaa;
+}
+
+.search{
+max-width:700px;
+margin:25px auto;
+}
+
+.search input{
+width:100%;
+padding:16px;
+border:none;
+border-radius:12px;
+font-size:16px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+.section-title{
+font-size:24px;
+margin:25px 0;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+gap:15px;
+}
+
+.card{
+background:#171b29;
+padding:20px;
+border-radius:14px;
+transition:0.3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.card a{
+color:#7aa2ff;
+font-size:20px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.card p{
+margin-top:10px;
+color:#bbb;
+}
+
+.tag{
+margin-top:10px;
+font-size:12px;
+color:#999;
+}
+
+.ad{
+background:#1b2233;
+border:1px dashed #555;
+padding:20px;
+text-align:center;
+margin:25px 0;
+border-radius:12px;
+}
+
+.categories{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+gap:12px;
+}
+
+.cat{
+background:#171b29;
+padding:18px;
+border-radius:12px;
+text-align:center;
+font-weight:bold;
+}
+
+footer{
+margin-top:50px;
+padding:30px;
+text-align:center;
+color:#888;
+border-top:1px solid #222;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">⚡ AI工具导航（可投广告版）</div>
+<h1>⚡ AI工具导航</h1>
+<p>发现全球最热门的AI工具</p>
+
+<div class="search">
+<input type="text" placeholder="🔍 搜索AI工具...">
+</div>
 </header>
 
 <div class="container">
 
-<div class="ad">🔥 广告位（Google AdSense / 联盟广告）</div>
+<div class="ad">
+🔥 广告位（Google AdSense / 联盟推广）
+</div>
 
-<h2>🔥 编辑推荐（可收费置顶）</h2>
+<h2 class="section-title">🔥 热门AI工具</h2>
 
 <div class="grid">
 
 <div class="card">
-<span class="badge">推荐</span>
-<h3><a href="https://chat.openai.com">ChatGPT</a></h3>
-<p>AI写作与对话工具</p>
-<div class="tag">写作</div>
+<a href="https://chatgpt.com">ChatGPT</a>
+<p>AI聊天与写作助手</p>
+<div class="tag">AI写作</div>
 </div>
 
 <div class="card">
-<span class="badge">热门</span>
-<h3><a href="https://www.midjourney.com">Midjourney</a></h3>
-<p>AI绘画生成工具</p>
-<div class="tag">绘画</div>
+<a href="https://claude.ai">Claude</a>
+<p>AI写作与编程助手</p>
+<div class="tag">AI写作</div>
 </div>
 
 <div class="card">
-<h3><a href="https://www.notion.so/product/ai">Notion AI</a></h3>
+<a href="https://gemini.google.com">Gemini</a>
+<p>Google AI助手</p>
+<div class="tag">AI搜索</div>
+</div>
+
+<div class="card">
+<a href="https://www.midjourney.com">Midjourney</a>
+<p>AI绘画生成平台</p>
+<div class="tag">AI绘画</div>
+</div>
+
+<div class="card">
+<a href="https://www.perplexity.ai">Perplexity</a>
+<p>AI搜索引擎</p>
+<div class="tag">AI搜索</div>
+</div>
+
+<div class="card">
+<a href="https://runwayml.com">Runway</a>
+<p>AI视频生成工具</p>
+<div class="tag">AI视频</div>
+</div>
+
+<div class="card">
+<a href="https://cursor.com">Cursor</a>
+<p>AI编程神器</p>
+<div class="tag">AI编程</div>
+</div>
+
+<div class="card">
+<a href="https://notion.so">Notion AI</a>
 <p>AI办公助手</p>
-<div class="tag">办公</div>
+<div class="tag">AI办公</div>
 </div>
 
 </div>
 
-<div class="ad">中部广告位（赞助推荐）</div>
+<div class="ad">
+📢 赞助推荐位
+</div>
 
-<h2>📂 分类导航</h2>
-<p>AI写作 | AI绘画 | AI视频 | AI编程 | AI办公</p>
+<h2 class="section-title">📂 AI工具分类</h2>
+
+<div class="categories">
+
+<div class="cat">✍ AI写作</div>
+<div class="cat">🎨 AI绘画</div>
+<div class="cat">🎬 AI视频</div>
+<div class="cat">💻 AI编程</div>
+<div class="cat">📊 AI办公</div>
+<div class="cat">🔍 AI搜索</div>
+<div class="cat">🎵 AI音乐</div>
+<div class="cat">🗣 AI语音</div>
+
+</div>
+
+<footer>
+© 2025 AI工具导航
+</footer>
 
 </div>
 
